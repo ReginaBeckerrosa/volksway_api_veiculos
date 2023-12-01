@@ -20,7 +20,7 @@ public class VeiculoController {
     @Autowired //Injeção de dependência (deixar o código desacoplado, classe que utiliza funcionalidades de outras classes)
     VeiculoRepository veiculoRepository;
 
-    @GetMapping("/{idVeiculo}")
+    @("/{idVeiculo}")
     public ResponseEntity<Object> buscarVeiculo(@PathVariable(value = "idVeiculo") UUID id){
         Optional<VeiculoModel> veiculoBuscado = veiculoRepository.findById(id);
 
